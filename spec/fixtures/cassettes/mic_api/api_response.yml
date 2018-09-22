@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mic-leads.dev-test.makeiteasy.com/api/v1/create
+    body:
+      encoding: US-ASCII
+      string: access_token=d7b12de3f604b89c1d88300640cbf91f&pGUID=CFFBF53F-6D89-4B5B-8B36-67A97F18EDEB&pAccName=MicDevtest&pPartner=MicDevtest&name=Test+Name&business_name=Test+Business+Name&telephone_number=01234567890&email=testname%40example.com&contact_time=2018-09-22+15%3A34%3A23&notes=&reference=
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a3647de73f830d5cb5c63d7ccddd62ec"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.068790'
+      X-Request-Id:
+      - '0249644d-0c09-4bad-9bba-649550baa530'
+      Date:
+      - Sat, 22 Sep 2018 15:34:23 GMT
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      - cloud66
+      Server:
+      - nginx + Phusion Passenger 5.1.12
+    body:
+      encoding: UTF-8
+      string: '{"message":"Enqueue success","errors":[]}'
+    http_version: 
+  recorded_at: Sat, 22 Sep 2018 15:34:23 GMT
+recorded_with: VCR 4.0.0
