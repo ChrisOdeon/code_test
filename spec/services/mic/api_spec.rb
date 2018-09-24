@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Mic::Api do
    context 'I make an API callback request' do
     let(:result) do
-      VCR.use_cassette 'mic_api/api_response' do
+      VCR.use_cassette 'mic_api/api_successful_response' do
         Mic::Api.request_callback(
           name: 'Test Name',
           business_name: 'Test Business Name',
@@ -14,7 +14,7 @@ describe Mic::Api do
     end
 
     it 'should work' do
-      expect(result.parsed_response["message"]).to eq "Enqueue success"
+      expect(result).to eq true
     end
   end
 end

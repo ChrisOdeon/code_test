@@ -17,6 +17,8 @@ gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'turbolinks', '~> 5.0.0'
 gem 'uglifier', '4.1.3'
 
+gem 'haml-rails'
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

@@ -9,10 +9,12 @@ class Mic::Api
 
   def self.request_callback(name:, business_name:, tel_number:, email:)
     callback_url = APIURL + '/api/v1/create'
-    HTTParty.post(callback_url,
+    response = HTTParty.post(callback_url,
       body: request_body(name, business_name, tel_number, email),
       headers: { 'Content-Type' => 'application/x-www-form-urlencoded' }
     )
+
+    response.parsed_response['message'] == 'Enqueue success'
   end
 
   private

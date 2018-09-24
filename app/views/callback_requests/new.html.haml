@@ -1,0 +1,27 @@
+.container
+  - @callback_request.errors.full_messages.each do |error|
+    .alert.alert-danger= error
+
+  - flash.each do |key, value|
+    .alert{ class: "alert-#{key}"}= value
+
+  %h1 Request a callback
+  %p Fill in your details below and we will call you back
+
+  = form_for @callback_request do |f|
+    .form-group
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+    .form-group
+      = f.label :business_name
+      = f.text_field :business_name, class: 'form-control', required: true
+
+    .form-group
+      = f.label :email
+      = f.email_field :email, class: 'form-control', required: true
+
+    .form-group
+      = f.label :tel_number
+      = f.text_field :tel_number, class: 'form-control', required: true
+    
+    = f.submit "Request Callback", class: 'btn btn-primary'
